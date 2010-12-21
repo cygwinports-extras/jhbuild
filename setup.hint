@@ -1,4 +1,4 @@
 category: Devel Gnome
-requires: graphviz libgcc1 python python-gobject2.0 python-gtk2.0 python-vte
+requires: graphviz python python-gobject2.0 python-gtk2.0 python-twisted python-vte
 sdesc: "Tool for building GNOME from Git"
 ldesc: "Tool for building GNOME from Git."
