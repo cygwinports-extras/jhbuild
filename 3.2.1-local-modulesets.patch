@@ -1,0 +1,32 @@
+--- origsrc/jhbuild-3.2.1/Makefile.am	2011-10-08 11:12:20.000000000 -0500
++++ src/jhbuild-3.2.1/Makefile.am	2011-11-16 04:49:36.372132300 -0600
+@@ -9,6 +9,9 @@ endif
+ PATCHES = $(wildcard $(top_srcdir)/patches/*.patch)
+ MODULESETS = $(wildcard $(top_srcdir)/modulesets/*.modules) modulesets/moduleset.dtd
+ 
++modulesetdir = $(pkgdatadir)/modulesets
++moduleset_DATA = $(MODULESETS)
++
+ desktopdir = $(datadir)/applications
+ desktop_in_files = jhbuild.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+--- origsrc/jhbuild-3.2.1/jhbuild/defaults.jhbuildrc	2011-10-08 10:01:31.000000000 -0500
++++ src/jhbuild-3.2.1/jhbuild/defaults.jhbuildrc	2011-11-16 04:48:23.021936900 -0600
+@@ -8,7 +8,7 @@ if 'GTK_PATH' in os.environ.keys():
+     del os.environ['GTK_PATH']
+ 
+ # module directory
+-modulesets_dir = os.path.join(SRCDIR, 'modulesets')
++modulesets_dir = os.path.join(PKGDATADIR, 'modulesets')
+ 
+ # what modules to build?
+ moduleset = 'gnome-apps-3.2'
+@@ -177,7 +177,7 @@ jhbuildbot_dir = None
+ jhbuildbot_mastercfg = "master.cfg"
+ 
+ # whether to use a local copy of modulesets (instead of fetching them from svn)
+-use_local_modulesets = False
++use_local_modulesets = True
+ 
+ # whether to ignore soft dependencies
+ ignore_suggests = False

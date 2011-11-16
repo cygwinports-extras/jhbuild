@@ -1,3 +1,6 @@
 inherit gnome2 python # git
 
+
+PATCH_URI="3.2.1-local-modulesets.patch"
+
 CYGCONF_ARGS="--enable-doc-installation"
