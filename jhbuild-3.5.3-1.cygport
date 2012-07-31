@@ -1,5 +1,8 @@
 inherit gnome2 python # git
 
+CATEGORY="Devel Gnome"
+SUMMARY="Tool for building GNOME from Git"
+REQUIRES="graphviz"
 
 PATCH_URI="3.2.1-local-modulesets.patch"
 
