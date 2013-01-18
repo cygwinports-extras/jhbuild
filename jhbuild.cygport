@@ -2,7 +2,7 @@ inherit gnome2 python # git
 
 NAME="jhbuild"
 VERSION=3.5.91
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel GNOME"
 SUMMARY="Tool for building GNOME from Git"
 REQUIRES="graphviz"
