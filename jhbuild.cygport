@@ -1,14 +1,12 @@
 inherit gnome2 python # git
 
 NAME="jhbuild"
-VERSION=3.5.91
-RELEASE=2
-CATEGORY="Devel GNOME"
+VERSION=3.10.0
+RELEASE=1
+CATEGORY="Devel"
 SUMMARY="Tool for building GNOME from Git"
 REQUIRES="graphviz"
 
 PATCH_URI="3.2.1-local-modulesets.patch"
-
-RESTRICT="debuginfo"  # no need just for install-check
 
 CYGCONF_ARGS="--enable-doc-installation"
